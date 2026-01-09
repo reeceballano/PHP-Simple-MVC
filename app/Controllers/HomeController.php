@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Controllers;
+
+class HomeController 
+{
+    public function index()
+    {
+        $data = [
+            'title' => 'Homepage Title',
+            'message' => 'This is a message from Homecontroller'
+        ];
+
+        $this->view('home', $data);
+    }
+
+    protected function view($view, $data = [])
+    {
+        extract($data);
+        require __DIR__ . '/../Views/' . $view . '.php';
+    }
+}
