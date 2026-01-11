@@ -7,5 +7,7 @@
 </head>
 <body>
     <?= $data['message']; ?>
+
+
 </body>
 </html>

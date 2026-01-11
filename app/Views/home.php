@@ -7,6 +7,18 @@
 </head>
 <body>
     <?= $data['message']; ?>
+    <h1>Todos..</h1>
+    <?php if(empty($data['todos'])) : ?>
+        <h1>No todos!</h1>
+    <?php else : ?>
+        <ul>
+        <?php foreach($data['todos'] as $todo) : ?>
+           <li><?= $todo['title']; ?></li> 
+        <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
+
     <a href="/about">About</a>
 </body>
 </html>
