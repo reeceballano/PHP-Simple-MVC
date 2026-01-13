@@ -6,6 +6,11 @@
     <title><?= $data['title']; ?></title>
 </head>
 <body>
+    <form action="/search" method="POST">
+        <input type="text" name="search" placeholder="Search todos.." />
+        <button type="submit">Search</button>
+    </form>
+
     <?= $data['message']; ?>
     <h1>Todos..</h1>
     <?php if(empty($data['todos'])) : ?>

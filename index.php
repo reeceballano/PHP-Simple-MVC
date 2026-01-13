@@ -1,7 +1,5 @@
 <?php
 
-echo "hey";
-
 require_once __DIR__ . '/routes/web.php';
 
 spl_autoload_register(function($class) {
